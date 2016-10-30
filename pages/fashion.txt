@@ -1,0 +1,5 @@
+d=For a casual look  wear jeans and t-shirt
+d=For a formal event wear a suit and a tie
+d=For a typical smart casual look wear jeans and a shirt 
+q=what to wear for a casual event
+q=what to wear for a formal event
