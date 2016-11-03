@@ -1,0 +1,5 @@
+d=The movie Reservoir Dogs was directed by Quentin Tarantino
+d=Tarantino directed the movie Django Unchained
+d=Leonardio diCaprio starred in Django Unchained
+q=movies directed by Tarantino
+q=movies with dicaprio 

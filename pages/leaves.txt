@@ -1,0 +1,5 @@
+d=In Autumn leaves turn yellow
+d=During Summer there are green leaves
+d=In Winter there are no leaves
+q=green or yellow leaves
+q=Why there are no leaves around

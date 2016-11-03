@@ -1,0 +1,5 @@
+d=The logo of Twitter is a blue bird
+d=Facebook has a blue F as its logo 
+d=Snapchat has a logo of a ghost in yellow background
+q=blue logo of socials
+q=logo of Snapchat 
