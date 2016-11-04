@@ -48,14 +48,16 @@ def define_vocabulary(D):
     #V=[v for v in V if v!='']
     print('Dictionary={"%s"}'%'", "'.join(V))
     return V, words
+
 def define_idf(words,V, M,N):
     n=np.zeros(M)
     idf=np.zeros(M)
+
     print()
     print('Inverse term frequency')
     print('t_i\t\tn_i\tidf_i')    
     for i, v in enumerate(V):
-        n[i]=len([w for w in words if v in ' '.join(w)])    
+        n[i]=len([w for w in words if np.any(np.array(w)==v) ])    
         idf[i]=np.log2(N/n[i])
         if len(v)<8:
             print('%s\t\t%d\t%.2f'%(v,n[i],idf[i]))
