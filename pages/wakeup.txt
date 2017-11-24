@@ -1,5 +1,8 @@
 d=Wake me up before you go go
 d=Wake me up when september ends
-d=September has thirty days
+d=Wake up and live
+q=September has thirty days
 q=How many days in September?
 q=What shall I do before I go?
+q=What shall I do when september ends ?
+q=songs about September

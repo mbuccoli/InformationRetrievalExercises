@@ -1,0 +1,7 @@
+d=The information retrieval exam is tuesday
+d=The pervasive systems exam is thursday
+d=Monday there is no exam
+q=when is the information retrieval exam
+q=when is the pervasive systems exam
+q=what exam is on tuesday
+q=what exam is on monday
