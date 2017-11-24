@@ -208,3 +208,5 @@ class Results(object):
 if __name__=="__main__":    
     E=Exercise(voters=3, candidates=7, topK=4)
     E.solve(True)
+    
+    
