@@ -7,43 +7,26 @@ def check(d,D):
             return False
     return True        
 
-def random_exercize(N=0,M=0):
-    M=6
-    N=4
-    Q_ = [np.array([0,0,0,1,1,1])]
-    D_ = [np.array([1,0,1,0,0,1]),
-          np.array([1,0,1,0,0,0]),
-          np.array([0,1,1,0,1,0]),
-          np.array([1,0,0,1,1,0])]
+def random_exercize(N=4,M=6, random=True):
+    
+    if not random:
+        N=4; M=6;
+        Q_ = [np.array([0,0,0,1,1,1])]
+        D_ = [np.array([1,0,1,0,0,1]),
+              np.array([1,0,1,0,0,0]),
+              np.array([0,1,1,0,1,0]),
+              np.array([1,0,0,1,1,0])]
+    else:
+        D_=[np.round(np.random.rand(M)).astype(np.int32) for _ in range(N)]
+        Q_=[np.round(np.random.rand(M)).astype(np.int32)]
     idxs=np.random.permutation(M)
     d_idxs=np.random.permutation(N)
     Q=[Q_[0][idxs]]
-    D=[D_[d][idxs] for d in d_idxs]
-    '''
-    
-    if N==0:
-        N=np.random.randint(4,5)
-    if M==0:
-        M=np.random.randint(5,7)
-    D=[]
-    Q=[]
-    i=0
-    while i<N+1:
-        d=np.zeros(M)
-        h=np.random.permutation(M)
-        num_1=np.random.randint(3,4)
-        d[h[:num_1]]=1
-        if i==0:
-            Q.append(d)
-        elif check(d,D):
-            D.append(d)
-        else:
-            continue
-        i=i+1
-    '''
+    D=[D_[d][idxs] for d in d_idxs]   
     return D,Q
-def propose_exercize(N=0,M=0):
-    D,Q=random_exercize(N,M)
+
+def propose_exercize(N=4, M=6, random=True):
+    D,Q=random_exercize(N,M, random)
     print('Given')
     print('\tQuery incidence vector')
     print('\t\tq=%s'%str(Q[0]))

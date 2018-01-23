@@ -2,23 +2,29 @@ import numpy as np
 import os
 import matplotlib as plt
 
-def generate_exercize():
+def generate_exercize(i, i_q):
     files=os.listdir('pages')
     files=[f for f in files if f.endswith('.txt')]
-    i=np.random.randint(len(files))
+    files=np.unique(files).tolist()
+    #i=files.index('wakeup.txt') #
+    if i==-1:
+        i=np.random.randint(len(files))
     with open(os.path.join('pages',files[i]),'r') as f:
         content=f.read()
     sentences=content.split('\n')
     D=[s.split('d=')[1] for s in sentences if s.startswith('d')]    
     Q=[s.split('q=')[1] for s in sentences if s.startswith('q')]
-    if len(Q)>1:
-        q=Q[np.random.randint(len(Q))]
+    
+    if i_q==-1:
+        q=Q[np.random.randint(len(Q))] #[-1]#
+    else:
+        q=Q[i_q]
     if len(D)>3:
         D=D[np.random.permutations(len(D))[:3]]
     return q, D    
 
-def propose_exercize():
-    q, D=generate_exercize()
+def propose_exercize(doc=-1, quer=-1):
+    q, D=generate_exercize(doc, quer)
     print('Given a query')
     print('\t * %s'%q)
     print('And a collection of documents')
