@@ -1,12 +1,12 @@
-# IR2016
+# Information Retrieval Exercises
 A set of Jupyter Notebooks for the course Information Retrieval 2016, held at Politecnicod di Milano
 
 The first notebook
-https://github.com/mbuccoli/IR2016/blob/master/SVD%20and%20LSA.ipynb
+https://github.com/mbuccoli/InformationRetrievalExercises/blob/master/SVD%20and%20LSA.ipynb
 includes to the code I showed in last class and concerning the use of SVD for a vector space model.
 
 The secondo notebook
-https://github.com/mbuccoli/IR2016/blob/master/Exercizes%20quality%20metrics.ipynb
+https://github.com/mbuccoli/IR2016/InformationRetrievalExercises/master/Exercizes%20quality%20metrics.ipynb
 includes one exercize for the quality metrics. The script automatically generates a random query results and it is able to solve several exercizes.  
 
 In order to use it, just download the repo, unzip it and run a jupyter notebook session from the directory of the repository.
